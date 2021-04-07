@@ -18,14 +18,26 @@ fetch(allFoods)
             let li = createNode("li");
             let img = createNode("img");
             let span = createNode("span");
+            //declare
+            let title = createNode("span");
 
-            img.setAttribute("width", "200");
 
+            // img.setAttribute("width", "350");
+            img.className = "pict";
+            span.className = "text";
+            title.className = "foodTitle";
+
+            
             img.src = categories.strCategoryThumb;
+            title.innerHTML = `${categories.strCategory}`; 
             span.innerHTML = `${categories.strCategory}, ${categories.strCategoryDescription}`;
+            
             append(li, img);
+            append(li, title);
             append(li, span);
             append(foods, li);
+
+            console.log(foods);
         })
     })
     .catch((error) => console.log(error));
