@@ -25,7 +25,9 @@ function searching(){
             let img = createNode("img");
             let span = createNode("span");
     
-            img.setAttribute("width", "200");
+            img.className = "pict";
+            span.className = "text";
+            title.className = "foodTitle";
     
             img.src = x.strCategoryThumb;
             span.innerHTML = `${x.strCategory}, ${x.strCategoryDescription}`;
