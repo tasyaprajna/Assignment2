@@ -21,6 +21,9 @@ fetch(allFoods)
             //declare
             let title = createNode("span");
 
+            img.className = "pict";
+            span.className = "text";
+            title.className = "foodTitle";
 
             // img.setAttribute("width", "350");
             img.className = "pict";
