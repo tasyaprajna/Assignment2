@@ -19,7 +19,9 @@ fetch(allFoods)
             let img = createNode("img");
             let span = createNode("span");
 
-            img.setAttribute("width", "200");
+            img.className = "pict";
+            span.className = "text";
+            title.className = "foodTitle";
 
             img.src = categories.strCategoryThumb;
             span.innerHTML = `${categories.strCategory}, ${categories.strCategoryDescription}`;
