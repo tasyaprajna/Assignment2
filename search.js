@@ -24,14 +24,19 @@ function searching(){
             let li = createNode("li");
             let img = createNode("img");
             let span = createNode("span");
+            let title = createNode("span");
     
-            img.className = "pict";
-            span.className = "text";
-            title.className = "foodTitle";
+            img.className = "filter_pict";
+            span.className = "filter_text";
+            title.className = "filter_foodTitle";
     
+
             img.src = x.strCategoryThumb;
+            title.innerHTML = `${x.strCategory}`; 
             span.innerHTML = `${x.strCategory}, ${x.strCategoryDescription}`;
+            
             append(li, img);
+            append(li, title);
             append(li, span);
             append(foods, li);
         })
